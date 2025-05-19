@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<!-- saved from url=(0083)file:///C:/Users/molme/Documents/DEVCAMP/FULL_STACK/Modulo_4/CHECKPOINT7/index.html -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>CHECKPOINT 7</title>
+  <style> 
+    
+    body {
+      padding:30px;
+    }
+    
+    pre {
+      background-color: #f4f4f4;
+      padding: 1em;
+      border-radius:4px;
+      overflow-x: auto;
+    }
+
+    code {
+      font-family: Consolas, monospace;
+      color: #c7254e;
+    }
+
+    /* Encabezado */
+    
+    .header {
+      text-align:center;
+      margin-top: 50px;
+      margin-bottom:50px;
+    }
+    
+    .header h1 {
+      font-weight:bold;
+    }
+    
+    .header p {
+      color: gray;
+      border-bottom:1px solid
+    }
+    
+    .header h2 {
+      color: darkblue;
+      margin-top: 40px;
+    }
+    
+     /* Contenido */
+    
+    .container {
+      display:flex;
+      gap: 6rem;
+    }
+    
+    /* Indice */
+
+    .indice {
+      width: 20%;
+      background-color:#f9f9f9;
+      border: 1px solid #ccc;
+      padding:30px 30px 30px 20px;
+      height: 450px;
+      position:sticky;
+      top:20px
+     }
+    
+    .indice h2 {
+      text-align:center;
+      margin-bottom:30px;
+      color:darkblue;
+    }
+    
+    .indice li {
+      margin-bottom:20px;
+    }
+    .indice a {
+      text-decoration: none;
+      color: darkblue;
+    }
+    
+    ul li a:hover {
+        text-decoration: underline;
+    }
+    
+      /*Texto*/
+    
+    .content {
+      width:60%;
+      text-align: justify;
+    }
+    .content h2 {
+      color: darkblue;
+      margin-left:50px;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+   
+  </style>
+</head>
+<body>
+  
+       <!-- Encabezado -->
+  <div class="header">
+    <h1> CHECKPOINT 7: JAVASCRIPT </h1>
+    <p> Mario Olmeño. Checkpoint 7: JavaScript </p>
+    <h2> PREGUNTAS TEÓRICAS </h2>
+  </div>
+  
+    <!-- Texto -->
+  <div class="container">
+    <nav class="indice">
+      <h2>Preguntas</h2>
+      <ul style="list-style-type: none" ;="">
+        <li><a href="file:///C:/Users/molme/Documents/DEVCAMP/FULL_STACK/Modulo_4/CHECKPOINT7/index.html#pregunta1">1-¿Qué diferencia a Javascript de cualquier otro lenguaje de programación? </a></li>
+        <li><a href="file:///C:/Users/molme/Documents/DEVCAMP/FULL_STACK/Modulo_4/CHECKPOINT7/index.html#pregunta2">2-¿Cuáles son algunos tipos de datos de JavaScript? </a></li>
+        <li><a href="file:///C:/Users/molme/Documents/DEVCAMP/FULL_STACK/Modulo_4/CHECKPOINT7/index.html#pregunta3">3-¿Cuáles son las tres funciones de string en JavaScript?  </a></li>
+        <li><a href="file:///C:/Users/molme/Documents/DEVCAMP/FULL_STACK/Modulo_4/CHECKPOINT7/index.html#pregunta4">4-¿Qué es un condicional?</a></li>
+        <li><a href="file:///C:/Users/molme/Documents/DEVCAMP/FULL_STACK/Modulo_4/CHECKPOINT7/index.html#pregunta5">5-¿Qué es un operador ternario? </a></li>
+        <li><a href="file:///C:/Users/molme/Documents/DEVCAMP/FULL_STACK/Modulo_4/CHECKPOINT7/index.html#pregunta6">6-¿Cual es la diferencia entre una declaración de función y una expresión de función?</a></li>
+        <li><a href="file:///C:/Users/molme/Documents/DEVCAMP/FULL_STACK/Modulo_4/CHECKPOINT7/index.html#pregunta7">7-¿Qué es la clave "this" en JavaScript? </a></li>
+      </ul>
+    </nav>
+   
+    <!-- Contenido -->
+    <main class="content">
+      <section id="pregunta1">
+        <h2>1-¿Qué diferencia a Javascript de cualquier otro lenguaje de programación? </h2>
+        <p>Javascript es un lenguaje de programación interpretado y orientado a objetos.  
+          Cuando decimos que es un lenguaje interpretado nos referimos a que se ejecuta línea a línea en tiempo real 
+          con un intérprete, que en el caso de Javascript puede ser cualquiera de los principales navegadores.<br>  
+          De hecho Javascript es el único lenguaje de programación que puede ser interpretado por los principales navegadores
+          Web. Esto hace que sea capaz de ejecutarse directamente en el propio navegador sin necesidad de instalar ningún tipo 
+          de entorno de ejecución externo en nuesta máquina.<br>  
+          Diferenciándose así del resto de lenguajes de programación. </p>
+        <p>Otros lenguajes como Java, Phyton, C++... necesitan un compilador que "traduce" el código base a un formato que 
+            entiende el entorno de ejecución de cada lenguaje.  
+            De esta manera para ejecutar un código en nuestro ordenador, escrito en cualquiera de estos lenguajes deberíamos 
+            tener instalado su intérprete, mientras que si utilizamos JavaScript, el propio navegador de nuestro ordenador lo 
+            puede ejecutar sin necesitar intermediarios.  
+            Esto hace que JavaScript sea un lenguaje muy adecuado tanto para frontend (desarrollo WEB), combinado con HTML y
+            CSS, como para backend del lado del servidor, creando servidores o accediendo a bases de datos.</p>
+        <p>A continuación a modo de ejemplo presentamos un gráfico que compara el flujo de ejecución en Javascript frente a otro lenguaje,
+           en este caso Java.<br>    
+           Apreciamos como en el caso de Javascript, tanto la escritura de código, la ejecución y la respuesta se producen en
+           nuestro navegador WEB.<br>    
+           En el caso de Java, por el contrario, necesitamos un editor de texto para escribir el código (en este caso VSCode),
+           un compilador (Javac) que convierte el archivo.java generado en el editor por un archivo.class que puede ser ejecutado 
+           por el intérprete de Java (JVM).  
+        </p>
+        <img src="./CHECKPOINT 7_files/Javascript_vs_Java.jpeg" style="width:90%" ;="">
+      </section>
+
+      <section id="pregunta2">
+
+        <h2>2-¿Cuáles son algunos tipos de datos de JavaScript? </h2>
+
+        <p>JavaScript es un lenguaje débilmente tipado, es decir las variables no se asocian directamente a ningún tipo de dato 
+            en particular, es el valor que nosotros asignamos a la variable el que va a definir el tipo de dato.  
+            Dicho de otra manera, no necesitamos declarar el tipo de dato al asignar la variable, JavaScript lo asigna 
+            automáticamente en función del valor que introduzcamos nosotros. </p>
+        <p>Podemos ver en el ejemplo siguiente como según vamos asignando diferentes tipos de valores a la misma variable 
+           JavaScript va dándole en cada caso un tipo de dato diferente.<br>
+           Para comprobar el tipo de dato al que pertenece una variable usamos la función typeof. </p>
+
+        <pre><code> 
+          var foo = 4;
+          typeof foo //number
+        </code></pre>
+
+        <pre><code> 
+          var foo = "Hola";
+          typeof foo //string
+        </code></pre>
+       
+
+        <pre><code> 
+          var foo = true;
+          typeof foo //boolean
+        </code></pre>
+       
+
+        <h4><strong>Tipo Number</strong></h4>  
+          <p> En JavaScript a diferencia de otros lenguajes todos los números pertenecen al mismo tipo de dato: number, 
+            sin hacer diferencia como en otros lenguajes entre enteros o decimales. 
+          </p>
+        <pre><code> 
+          var foo = 32;
+          typeof foo // number  
+        </code></pre>
+
+        <pre><code> 
+          var foo = 32.5;
+          typeof foo // number
+        </code></pre>
+       
+        <p>Number cubre todo el espectro de números entre -(2^253-1) y (2^53-1), 
+           también acepta infinito,  -infinito, NaN (Not a Number) que representa operaciones que no pueden realizarse 
+           como por ejemplo la raíz cuadrada de un número negativo.  
+        </p>
+
+        <pre><code> 
+          var foo = 32/0;
+          foo // Infinity
+          typeof Infinity // number
+        </code></pre>
+
+        <pre><code> 
+          var foo = Math.sqrt(-4);
+          foo // NaN 
+          typeof Nan // number
+        </code></pre>
+
+        <p>Para números que excedan el rango de number JavaScript pierde precisión generando errores, 
+           en estos casos se usa el tipo BigInt (no admite decimales).</p>
+
+        <h4><strong>Tipo String</strong></h4>  
+        <p> En un principio el tipo String engloba los datos de texto, aunque JavaScript considerará como un string 
+          cualquier dato que escribamos entre comillas (pueden ser dobles "" ó simples ''), aunque sea un número. <br>
+          Así en el ejemplo que hemos utilizado al principio si asignamos todos los valores entrecomillados JavaScript 
+          los interpretará como string. 
+        </p>
+        <pre><code> 
+          var foo = "4";
+          typeof foo // string
+        </code></pre>
+         <pre><code> 
+          var foo = "Hola";
+          typeof foo // string
+        </code></pre>
+         <pre><code> 
+          var foo = "true";
+          typeof foo // string  
+        </code></pre>
+
+        <p>Todos los elementos de la cadena tienen un índice que las representa, empezando por el 0. 
+            Esto nos permite acceder a cualquier elemento de la cadena. </p>
+
+        <pre><code> 
+          var saludo = "Hola";
+          saludo[1] //"o"
+        </code></pre>
+
+        <p>Las cadenas de texto en JavaScript son inmutables, es decir una vez creada no es posible modificarla. Hay métodos para 
+          modificar estas cadenas aunque en realidad no la modifica si no que crea una cadena nueva.  </p>
+
+        <pre><code> 
+          var saludo = "Hola";
+          saludo[0] = "h";
+          saludo // "Hola"
+         </code></pre>
+
+        <p>No se ha realizado la sustitución esperada de "H" por "h". No se puede modificar.  </p>
+
+        <h4><strong>Tipo Boolean</strong></h4>   
+        <p> El tipo booleano es un tipo de dato lógico que solo acepta dos valores true o false. 
+            Generalmente permiten comparaciones a partir de operadores relacionales, también se pueden combinar con operadores 
+            lógicos.  
+            Cualquier dato se define por defecto como verdadero o falso. Los que se definen como falso son: 
+            false, 0, "", null, Nan, undefined.
+        </p> 
+
+        <pre><code> 
+          Boolean(0)// false  
+          Boolean("")// false  
+          Boolean(null)// false  
+          Boolean(NaN)// false 
+          Boolean(1)// true  
+          Boolean("a")// true 
+        </code></pre>
+      
+        <p>De la misma manera cualquier resultado de una comparación será verdadero o falso.  </p>
+
+        <pre><code> 
+          5&gt;2 // true  
+          5===2 // false 
+        </code></pre>
+
+        <p>Esto nos permite ejecutar operaciones condicionales en las que si una determinada condición es verdadera 
+          se realice una acción determinada y si es falsa se realice otra diferente.  </p>
+        
+        <pre><code> 
+        var edad = 18
+        if (edad &gt;=18){
+          console.log("mayor de edad")
+        }else {
+          console.log("menor de edad")
+        } // mayor de edad
+        </code></pre> 
+
+        <h4><strong> Tipo Null</strong></h4>  
+        <p> El tipo Null solo tiene un valor null, es decir, nulo o vacío. <br> 
+            var user = null;<br> 
+            declaramos la variable dejándola vacía. 
+        </p>
+
+        <pre><code> 
+          var user = null;
+          if (user ===null){
+            console.log("valor de usuario nulo")
+          } else {
+            console.log(`el nombre del usuario es ${user}`)
+          } //valor de usuario nulo
+        </code></pre>
+
+        <h4><strong> Tipo Undefined</strong></h4>  
+        <p> Es parecido a null aunque en este caso no indica ausencia de valor si no que la variable no ha sido asignada.  </p>
+
+        <pre><code> 
+          var user;
+          if (user ===undefined){
+            console.log("valor de usuario sin definir")
+          } else {
+            console.log(`el nombre del usuario es ${user}`)
+          }//valor de usuario sin definir
+        </code></pre>
+        
+      </section>
+
+      <section id="pregunta3">
+        <h2>3-¿Cuáles son las tres funciones de string en JavaScript?  </h2>
+        <h4><strong> 1-CONCAT</strong></h4>    
+            La función concat, concatena o enlaza varios textos en uno. <br> 
+            Como ya hemos comentado anteriormente los strings en JavaScript son inmutables, por lo tanto la función no 
+            modificará el string original simplemente devolverá el resultado de la unión de los textos. <br>  
+            Si queremos guardar este resultado con los textos unidos deberíamos asignarle otro nombre. <p></p>
+
+        <pre><code> 
+          var str = "En un lugar de La Mancha de cuyo nombre no quiero acordarme"
+          console.log(str.concat("no ha mucho que vivía un hidalgo..."))
+          //En un lugar de La Mancha de cuyo nombre no quiero acordarme no ha mucho que vivía un hidalgo...   
+        </code></pre>  
+
+        <p>¡solo imprime el contenido en este uso de concat. str continúa con su contenido original!</p>  
+
+        <pre><code> 
+         console.log(str) // En un lugar de La Mancha de cuyo nombre no quiero acordarme 
+        </code></pre>  
+
+        <p>Si queremos guardarlo, debemos asignarle una nueva variable.</p>  
+
+        <pre><code> 
+          var newStr = str.concat(" no ha mucho que vivía un hidalgo...")
+          //'En un lugar de La Mancha de cuyo nombre no quiero acordarme no ha mucho que vivía un hidalgo...'
+        </code></pre> 
+        
+        <h4><strong> 2-REPLACE</strong></h4>  
+        <p> La función replace nos permite reemplazar una parte de un string por otro.  
+            Al igual que antes si queremos guardar el nuevo resultado tendremos que hacerlo en una variable nueva. 
+        </p>  
+
+        <pre><code> 
+          var str = "En un lugar de La Mancha de cuyo nombre no quiero acordarme"
+          str.replace("de","DE")//'En un lugar DE La Mancha de cuyo nombre no quiero acordarme'  
+        </code></pre> 
+
+        <p>.replace solo reemplaza la primera coincidencia, en este caso se repite dos veces la preposición de y vemos que 
+          solo ha sustituido la primera.<br>
+          En caso de querer reemplazar todas las coincidencias podemos usar el modificador g.</p>
+
+        <pre><code> 
+          str.replace(/de/g,"DE") // En un lugar DE La Mancha DE cuyo nombre no quiero acordarme  
+        </code></pre> 
+
+        <p>Como vemos en este caso ha realizado el reemplazo de las dos coincidencias. <br>
+           Al igual que hemos usado el modificador g anteriormente podemos utilizar gi para hacer que las mayúsculas 
+           o minúsculas no afecten a la búsqueda.
+        </p>
+
+        <pre><code> 
+          str.replace(/LA MANCHA/gi, "Castilla") //En un lugar de Castilla de cuyo nombre no quiero acordarme' 
+        </code></pre> 
+
+        <h4><strong> 3-SLICE</strong></h4> 
+        <p> Extrae una parte del string entre un índice inicial (incluído) y un índice final (excluído). </p>
+
+        <pre><code> 
+          str.slice(0,24) //En un lugar de La Mancha 
+        </code></pre> 
+
+        <p>Podemos usar índices negativos para empezar por el final.  
+          Vamos a extraer la letra de un DNI.</p>
+
+        <pre><code> 
+          var dni = "12345678H"
+          dni.slice(-1) // H
+        </code></pre> 
+
+        <p>También podríamos extraer el string de la dirección de un mail anterior a la @, para asignarlo como nombre de usuario.  </p>
+        
+        <pre><code> 
+          var userMail = "fullstack@gmail.com";
+          var userName = userMail.slice(0, userMail.indexOf("@"));
+          userName //fullstack
+        </code></pre> 
+      
+      </section>
+
+       <section id="pregunta4">
+        <h2>4-¿Qué es un condicional?</h2>
+        <p>Un condicional es una estructura que nos permite controlar el flujo de nuestro código en función de si una condición, 
+          planteada por nosotros mismos, se cumple o no. De tal manera que podemos indicar a nuestro programa que si la condición 
+          que hemos planteado se cumple realice una determinada acción y si no se cumple realice otra totalmente diferente.<br>  
+ 
+          Las sentencias con las que se declara un condicional son IF,ELSE,ELSE IF y dependiendo de como las agrupemos tendremos 
+          tres tipos de estructuras condicionales distintas: IF, IF-ELSE, IF-ELSE IF-ELSE. </p>  
+
+         <h4><strong>1.1. IF:</strong></h4>
+        <p> La sentencia IF nos permite indicarle a nuestro programa que si se cumple nuestra condición ejecute una determinada acción.  
+            Si nuestra condición no se cumple el programa ignora esta acción y continúa la ejecución del código.
+        </p>
+          <img src="./CHECKPOINT 7_files/if.jpeg" width="80%">
+        <p>La sintaxis de esta estructura es la siguiente:   </p>
+
+        <p> <strong>If (nuestra condición){<br> 
+             acción que tiene que ejecutar si la condición es cierta <br>
+              } </strong> 
+        </p>
+
+        <p>La sentencia If seguida de nuestra condición entre paréntesis.<br>
+            En la siguiente linea declaramos la acción a ejecutar si nuestra condición se cumple, 
+            esta línea tiene que ir entre llaves.<br>
+            Vamos a verlo con un ejemplo: </p>
+
+          <p>¿Es letra una vocal? <br> 
+            Tenemos una variable llamada letra a la que asignaremos una letra del abecedario y 
+            queremos conseguir que el programa nos avise si esa letra es una vocal. </p>
+
+        <pre><code> 
+          var letra = "a";
+          var vocales = "a,e,i,o,u";
+          if (vocales.includes(letra)) {
+            console.log(`la ${letra} es una vocal`)
+          } // la a es una vocal
+        </code></pre> 
+
+        <p>Si el programa detecta que letra es una vocal, imprime un mensaje para decirnos que lo es.<br> 
+           En caso contrario no hace nada y continua con el código fuera del condicional. 
+        </p>
+        
+         <h4> <strong>1.2. IF-ELSE: </strong> </h4><br>
+        <p> En el código del apartado anterior si letra es una vocal el programa nos imprime un mensaje y si no es una 
+          vocal continua su flujo.<br>  
+          En este caso lo que queremos es que si se cumple la condición de ser vocal imprima un mensaje y si no, imprima otro 
+          mensaje diferente y luego continue su flujo.<br>  
+          Para eso utilizamos la sentencia ELSE después de declarar la condición como hemos visto en el ejemplo anterior.
+        </p>
+        <img src="./CHECKPOINT 7_files/if_else.jpeg" width="80%">
+
+        <p>La sintaxis sería la siguiente: <br> 
+            La estructura IF igual que hemos visto anteriormente seguida de la sentencia ELSE y en la siguiente línea añadir 
+            la orden que queremos que se ejecute si la condición (expresada en el IF) no se cumple, siempre entre llaves.  
+        </p>
+        <p> <strong>If (nuestra condición){<br> 
+                      acción que tiene que ejecutar si la condición es cierta <br>
+                    }Else {<br>
+                      acción que tiene que ejecutar si la condición es falsa <br>
+                    }
+        </strong> </p>
+ 
+  
+  
+        <p>¿Es letra una vocal o una consonante?  
+        Continuando con el ejemplo anterior, en este caso no es suficiente que el programa nos avise cuando detecte que una 
+        letra sea vocal, queremos que cuando no lo sea también nos lo indique.   </p>
+      
+        <pre><code> 
+            var letra = "h";
+            var vocales = "a,e,i,o,u";
+            if (vocales.includes(letra)) {
+              console.log(`la ${letra} es una vocal`)
+            } else {
+              console.log(`la ${letra} es una consonante`)
+            } // la h es una consonante
+        </code></pre> 
+
+        <p> Si el programa detecta que letra es una vocal, imprime un mensaje para decirnos que lo es. En caso contrario 
+            imprime otro mensaje para decirnos que es una consonante. 
+        </p>
+         
+        <h4><strong> 1.3. IF-ELSE IF-ELSE:</strong></h4>
+        <p>    Podemos encontrarnos casos en los que necesitemos unir más de dos condicionales seguidas, 
+              en estas situaciones podemos encadenar todas las condicionales necesarias con la sentencida ELSE IF, 
+              siempre entre la sentencia IF que abre el condicional y la sentencia ELSE que lo cierra.
+        </p> 
+        <img src="./CHECKPOINT 7_files/if_elseif_else.jpeg" style="width:80%">
+
+        <p> La sintaxis sería la siguiente:<br>
+        <strong>If (nuestra condición){<br> 
+                  acción que tiene que ejecutar si la condición es cierta <br>
+                }Else if (nueva condición){ <br> 
+                  acción que tiene que ejecutar si esta condición es cierta <br>  
+                }Else {<br>
+                  acción que tiene que ejecutar si las dos condiciones anteriores son falsas <br>
+                }
+        </strong> </p>
+   
+
+
+        <p>Podemos intercalar todos los ELSE IF que queramos pero solo puede haber un IF al principio y un ELSE al final. 
+          ¿Es letra una vocal, una consonante o es la "y"?  
+          Continuamos con nuestro ejemplo, pero en este caso ya no nos basta con diferenciar vocales y consonantes, 
+          también queremos diferenciar la "y" que tiene un comportamiento diferente al resto.</p>
+
+        <pre><code> 
+          var letra = "y";
+          var vocales = "a,e,i,o,u";
+          if (vocales.includes(letra)) {
+            console.log(`la ${letra} es una vocal`)
+          } else if (letra === "y") {
+            console.log(`la ${letra} es una vocal o consonante dependiendo de su uso`)
+          }else{
+            console.log(`la ${letra} es una consonante`)
+          } // la y es una vocal o consonante dependiendo de su uso
+        </code></pre> 
+
+        <p>Si el programa detecta que es una vocal, imprime un mensaje diciendo que lo es.   
+            Si no es vocal pasa a la siguiente condición: si detecta que es la "y", imprime otro mensaje diciendo que es la "y".  
+            Si tampoco es la "y", imprimirá un mensaje diciendo que es una consonante. </p>
+
+      </section>
+
+      <section id="pregunta5">
+        <h2>5-¿Qué es un operador ternario? </h2>
+          <p>El operador condicional ternario es una versión simplificada de la instrucción if-else.<br>  
+            Utiliza tres operandos, condición, Expresión1 (si se cumple la condición),Expresión2 (si no se cumple). <br> 
+            Sintaxis:<br> 
+            <strong>Condición ? expr1:expr2;  </strong><br> 
+            Siguiendo con el ejemplo del apartado anterior podríamos haber utilizado un operador ternario en vez del if-else para determinar 
+            si una letra es una vocal o una consonante. <br>  
+            Vamos a comparar ambos métodos: 
+          </p>
+
+        <p><strong>IF-ELSE</strong></p>  
+        <pre><code> 
+          var letra = "h";
+          var vocales = "a,e,i,o,u";
+
+          if (vocales.includes(letra)) {
+              console.log(`la ${letra} es una vocal`)
+          } else {
+              console.log(`la ${letra} es una consonante`)
+          } // la h es una consonante
+        </code></pre> 
+
+        <p><strong>OPERADOR TERNARIO </strong>  </p>
+
+        <pre><code> 
+         vocales.includes(letra)? console.log(`la ${letra} es una vocal`):console.log(`la ${letra} es una consonante`);
+         // la x es una consonante   
+        </code></pre> 
+
+        <p>Como vemos solo necesitamos una línea de código para lo mismo que en el caso anterior necesitábamos cuatro. 
+          Es más corto y compacto.  </p>
+
+        <img src="./CHECKPOINT 7_files/operador_ternario.jpeg" style="width:80%">
+
+        <p>También podría usarse con condicionales anidados:   </p>
+
+        <pre><code> 
+          vocales.includes(letra)? 
+          console.log(`la ${letra} es una vocal`):
+          (letra === "y" ? 
+                          console.log(`la ${letra} es una vocal o consonante en función de su uso`):
+                          console.log(`la ${letra} es una consonante`));  
+          // la x es una consonante  
+        </code></pre> 
+
+        <p>En este caso vemos como la legibilidad del código se complica bastante, siendo preferible el uso del formato IF-ELSE IF-ELSE 
+          por ser más comprensible.  
+          La utilización del operador ternario tiene sentido con condicionales básicas que se puedan agrupar en una línea y sean 
+          fácilmente legibles. </p>
+
+      </section>
+
+     <section id="pregunta6">
+        <h2>6-¿Cual es la diferencia entre una declaración de función y una expresión de función?</h2>
+
+        <p>Tanto la declaración de función como la expresión de función son dos formas distintas de generar una función y aunque 
+          aparentemente pueden comportarse casi de la misma manera tienen diferencias de comportamiento interno que pueden generar 
+          errores no deseados dependiendo del uso que hagamos de ellas.  
+          Vamos a ver su sintaxis con un ejemplo.  </p>
+
+        <p><strong>DECLARACION DE FUNCIÓN</strong>  <br> 
+          La sintaxis para una declaración de función es la siguiente:</p> <br> 
+        <p> <strong>function nombre_funcion(argumentos) { <br>
+                    contenido de la función}</strong></p><br>
+        <p>  palabra reservada function seguida del nombre de la función y el argumento o argumentos que vamos a pasar a dicha función 
+          entre paréntesis. Después del paréntesis entre llaves el contenido de la función. <br>  
+          La función tiene que tener un nombre obligatoriamente. 
+        </p>
+        <pre><code> 
+          function suma_dec (num1,num2) {
+          return num1 + num2;
+          }
+          suma_dec (3,4); // 7
+        </code></pre> 
+
+        <p><strong> EXPRESION DE FUNCIÓN </strong><br>
+          La sintaxis para una expresión de función es algo diferente ya que lo que hace es almacenar la función en una variable. <br> 
+          Se declara la variable y después del signo = se añade la palabra reservada function y los argumentos entre paréntesis. <br>
+          A continuación y entre llaves el contenido de la función.  
+
+          La función puede tener nombre o ser anónima ya que se almacena en una variable.</p> 
+        <p> <strong>var nombre_variable = function(argumentos) {<br>
+            contenido de la función<br>
+            }</strong>
+        </p>
+
+        <pre><code> 
+          var suma_exp = function (num1,num2) {
+              return num1 + num2;
+          };  
+          suma_exp(3,4); // 7
+        </code></pre> 
+
+        <p> Como vemos aunque la sintaxis es diferente el comportamiento es aparentemente el mismo.  
+            ¿Dónde está la diferencia entonces? <br> 
+            La principal diferencia está en el hecho de que la expresión de función se almacena en una variable pasando a comportarse
+            como tal. <br>
+            Esto implica que mientras una declaración puede llamarse antes de haberse declarado una expresión no, y nos devolverá 
+            un error.  </p>
+
+        <pre><code> 
+          suma_dec1 (3,4); // 7
+          function suma_dec1 (num1,num2) {
+              return num1 + num2;
+          }
+
+        </code></pre> 
+           
+        <pre><code> 
+          suma_exp1(3,4); // suma_exp1 is not defined
+          var suma_exp1 = function (num1,num2) {
+              return num1 + num2;
+          }; 
+        </code></pre> 
+
+        <p> ¿A qué se debe esto?  
+            Esto se debe a la manera en que JavaScript lee el código, ya que primero lee todas las declaraciones 
+            (de variables o funciones) y luego las asignaciones. Es lo que se conoce como HOISTING.<br>
+            En el caso de la declaración aunque nosotros pongamos en la línea superior la asignación de argumentos a la función, 
+            JavaScript habrá leído primero todas las declaraciones, entre ellas la de la propia función :<br> 
+            <strong>function suma_dec1 (num1,num2) {<br>
+                return num1 + num2;<br>
+            }</strong><br>
+            y al leer la asignación ya sabe a qué función estamos haciendo referencia.  </p> 
+
+        <p> 
+            En el caso de la expresión, en cambio, lo que estamos declarando es una variable por lo que en primera instancia 
+            JavaScript al leer las declaraciones solo leerá:  <br>
+            <strong>var suma_exp1 </strong> <br>
+            JavaScript todavía no sabe que suma_exp1 es una función con dos argumentos y que tiene que sumarlos, por eso si le 
+            asignamos los argumentos antes no reconoce la función y nos devuelve un error. </p>
+
+        <p>Este comportamiento es especialmente importante cuando la función forma parte de un bloque, sobre todo en sentencias como If,
+            For,While... ya que mientras la expresión de función siempre va a tener el mismo comportamiento (no Hoisting), la declaración de función 
+            que sí tiene Hoisting puede dar comportamientos inestables, saltándose el bloque unas veces otras no, aplicando el hoisting unas veces otras no... <br> 
+           Por eso siempre es más consistente y más seguro utilizar expresiones de función dentro de bloques y dejar la declaración de función para el entorno 
+           global.   </p> 
+
+        <p>Con todo lo visto podemos concluir que la expresión de función es mucho más consistente y fiable cuando tenemos que incluirla dentro de bloques. <br> 
+            Por otro lado la declaración de función es más eficiente que la expresión a nivel global ya que resulta más legible, están disponibles en todo el 
+            entorno para una fácil reutilización a lo largo de todo el código y para los motores JS es más fácil optimizar estas funciones ya que las conocen 
+            desde el principio. </p>
+
+        <img src="./CHECKPOINT 7_files/declaracionVSexpresion.jpeg" style="width:50%">
+
+      </section> 
+       <section id="pregunta7">
+        <h2>7-¿Qué es la clave "this" en JavaScript? </h2>
+
+        <p>This es una palabra reservada en JavaScript que hace referencia al objeto desde el cual se está llamando el código actual. 
+           Su valor depende de cómo se llama una función no de dónde está escrita.  
+           Tiene un funcionamiento similar a self en las clases de Python, solo que en Python self había que declararlo siempre y en Javascript This está implicito.  
+        </p>
+      
+        <p>Quizá la mejor manera de empezar a entender como funciona this, es imprimiéndola directamente y ver a qué hace referencia. </p>
+
+        <pre><code> 
+          console.log(this)// Window&nbsp;{0: Window, window: Window, self: Window, document: document...}
+        </code></pre> 
+
+        <p>Como vemos le pedimos a JavaScript que nos devuelva this desde el navegador, nos dice que this = window, 
+          es decir el propio navegador. Está tomando la referencia del entorno global como un objeto. </p>
+
+        <p>Si lo probamos dentro de una función sigue haciendo referencia al entorno global. </p>
+
+        <pre><code> 
+          function prueba_this(){
+            return this;
+          }
+          prueba_this()// Window
+        </code></pre> 
+
+        <p>Para verlo más claro vamos a declarar una variable: <br> 
+           var nombre= "Alba";<br> 
+           y a la función prueba_this() le vamos a pedir que devuelva this.nombre.
+        </p>
+        <pre><code> 
+          var nombre="Alba";
+          function prueba_this(){
+            return this.nombre;
+          }
+          prueba_this()// Alba
+        </code></pre> 
+        <p>Como hemos visto this dentro de una función hace referencia al entorno global, si pedimos a una función que devuelva this.nombre,
+          buscará en el entorno global la variable nombre y la devolverá.</p>
+
+        <p> En cambio si lo usamos como parte de un método en un objeto.  </p>
+
+        <pre><code> 
+          var alumno = {
+            nombre: "Alba",
+            saludar: function() {
+              console.log(`Hola ${this.nombre}`);
+            }
+          };
+          alumno.saludar();// Alba
+        </code></pre> 
+
+        <p>En este caso this se declara en el método saludar que a su vez pertenece a alumno.<br>
+           Por eso el entorno de this es alumno que es el objeto que contiene a saludar.<br>
+           this → es alumno.<br>
+           this.nombre → se refiere al valor de nombre dentro de alumno.   </p>
+
+        <pre><code> 
+          const profesor = {
+            nombre: "Luis",
+            saludar: function() {
+              console.log(`Hola ${this.nombre}`);
+            }
+          };  
+          profesor.saludar();
+        </code></pre> 
+          
+        <p>En este caso cuando decimos profesor.saludar(), estamos pidiendo que se ejecute el método saludar que se incluye en el objeto profesor, 
+          por eso this hará referencia al objeto profesor y this.nombre en este caso al valor del elemento nombre dentro de profesor. </p>
+
+        <p>Vamos a probar a declarar la función fuera del objeto para demostrar lo que decíamos al principio que this no depende de donde se 
+          declara si no de cómo se efectúa su llamada. </p>
+
+        <pre><code> 
+          var alumno = {
+          nombre: "Alba"}  
+
+          function saludar() {
+            console.log(`Hola ${this.nombre}`)}; 
+        </code></pre> 
+
+        <p>En este caso this todavía no hace referencia a ningún objeto concreto. </p>
+
+        <pre><code> 
+          alumno.funcion = saludar;
+          console.log(alumno.funcion())//Hola Alba
+        </code></pre> 
+
+      <p>Acabamos de asignar saludar como método dentro del objeto alumno con la propiedad funcion. 
+         En este momento this pasa a referirse a alumno. </p>
+      </section>
+
+      
+    </main>
+  </div>
+
+
+
+  
+
+</body></html>
